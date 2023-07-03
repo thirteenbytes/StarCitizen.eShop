@@ -6,4 +6,14 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="EFCore.NamingConventions" Version="7.0.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.8" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\StarCitizen.eShop.Application\StarCitizen.eShop.Application.csproj" />
+    <ProjectReference Include="..\StarCitizen.eShop.Domain\StarCitizen.eShop.Domain.csproj" />
+  </ItemGroup>
+
 </Project>

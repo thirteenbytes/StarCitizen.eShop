@@ -4,7 +4,7 @@ public abstract class Entity
 {
     private readonly List<DomainEvent> domainEvents = new();
 
-    public ICollection<DomainEvent> GetDomainEvents =>
+    public ICollection<DomainEvent> GetDomainEvents() =>
         domainEvents;
 
     protected void Raise(DomainEvent domainEvent) =>
