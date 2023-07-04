@@ -5,13 +5,15 @@ VisualStudioVersion = 17.6.33815.320
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{D038B871-36AE-4740-BDD0-FBC30D8AA353}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StarCitizen.eShop.Application", "StarCitizen.eShop.Application\StarCitizen.eShop.Application.csproj", "{17F98113-459A-46AE-AD27-6552CDF77F6C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StarCitizen.eShop.Application", "StarCitizen.eShop.Application\StarCitizen.eShop.Application.csproj", "{17F98113-459A-46AE-AD27-6552CDF77F6C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StarCitizen.eShop.Domain", "StarCitizen.eShop.Domain\StarCitizen.eShop.Domain.csproj", "{F5A3B9F4-1B44-43D0-9879-092B9646935B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StarCitizen.eShop.Domain", "StarCitizen.eShop.Domain\StarCitizen.eShop.Domain.csproj", "{F5A3B9F4-1B44-43D0-9879-092B9646935B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StarCitizen.eShop.Persistence", "StarCitizen.eShop.Persistence\StarCitizen.eShop.Persistence.csproj", "{37532A49-508F-4380-A74A-93028804DE61}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StarCitizen.eShop.Persistence", "StarCitizen.eShop.Persistence\StarCitizen.eShop.Persistence.csproj", "{37532A49-508F-4380-A74A-93028804DE61}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{4EFCB22F-334D-4279-BEB6-7F274142AC46}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StarCitizen.eShop.WebApi", "StarCitizen.eShop.WebApi\StarCitizen.eShop.WebApi.csproj", "{F51FEEA4-D8CE-4781-B353-88F3C4418542}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,6 +33,10 @@ Global
 		{37532A49-508F-4380-A74A-93028804DE61}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{37532A49-508F-4380-A74A-93028804DE61}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{37532A49-508F-4380-A74A-93028804DE61}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F51FEEA4-D8CE-4781-B353-88F3C4418542}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F51FEEA4-D8CE-4781-B353-88F3C4418542}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F51FEEA4-D8CE-4781-B353-88F3C4418542}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F51FEEA4-D8CE-4781-B353-88F3C4418542}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -39,6 +45,7 @@ Global
 		{17F98113-459A-46AE-AD27-6552CDF77F6C} = {D038B871-36AE-4740-BDD0-FBC30D8AA353}
 		{F5A3B9F4-1B44-43D0-9879-092B9646935B} = {D038B871-36AE-4740-BDD0-FBC30D8AA353}
 		{37532A49-508F-4380-A74A-93028804DE61} = {D038B871-36AE-4740-BDD0-FBC30D8AA353}
+		{F51FEEA4-D8CE-4781-B353-88F3C4418542} = {D038B871-36AE-4740-BDD0-FBC30D8AA353}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {141E5AD2-8DCE-4F23-922C-DC7DDBCC5219}
