@@ -19,6 +19,13 @@ public class Satellite
     public SatelliteType Type { get; private set; }
     // public Satellite Parent { get; private set; } = null!;
 
+    public void Update(string name, string description, SatelliteType type)
+    {
+        Name = name;
+        Description = description;
+        Type = type;
+    }
+
 
 
 }

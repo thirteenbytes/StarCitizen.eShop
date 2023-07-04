@@ -16,10 +16,4 @@
     <ProjectReference Include="..\StarCitizen.eShop.Domain\StarCitizen.eShop.Domain.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="UserCases\Satellites\Delete\" />
-    <Folder Include="UserCases\Satellites\Update\" />
-    <Folder Include="UserCases\Satellites\Read\" />
-  </ItemGroup>
-
 </Project>

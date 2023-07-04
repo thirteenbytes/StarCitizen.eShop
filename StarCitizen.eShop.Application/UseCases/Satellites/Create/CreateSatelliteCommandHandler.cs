@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace StarCitizen.eShop.Application.UserCases.Satellites.Create;
+namespace StarCitizen.eShop.Application.UseCases.Satellites.Create;
 
 internal class CreateSatelliteCommandHandler : IRequestHandler<CreateSatelliteCommand>
 {
