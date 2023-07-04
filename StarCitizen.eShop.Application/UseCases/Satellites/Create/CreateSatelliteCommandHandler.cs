@@ -1,11 +1,6 @@
 ﻿using MediatR;
 using StarCitizen.eShop.Application.Data;
 using StarCitizen.eShop.Domain.Satellites;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace StarCitizen.eShop.Application.UseCases.Satellites.Create;
 
@@ -21,14 +16,36 @@ internal class CreateSatelliteCommandHandler : IRequestHandler<CreateSatelliteCo
     }
 
     public async Task Handle(CreateSatelliteCommand request, CancellationToken cancellationToken)
-    {               
-        var satellite = new Satellite(
-            new SatelliteId(Guid.NewGuid()), 
-            request.Name, 
-            request.Description, 
-            SatelliteType.Create(request.Type));
+    {
 
-        repository.Add(satellite);
+        if (request.parentId is null)
+        {
+            var satellite = new Satellite(
+                new SatelliteId(Guid.NewGuid()),
+                request.Name,
+                request.Description,
+                SatelliteType.Create(request.Type));
+
+            repository.Add(satellite);
+        }
+        else
+        {
+            var parentSatellite = await repository.GetByIdAsync(request.parentId);
+            if (parentSatellite is null)
+            {
+                throw new SatelliteNotFoundExpection(request.parentId);
+            }
+
+            var satellite = new Satellite(
+                new SatelliteId(Guid.NewGuid()),
+                request.Name,
+                request.Description,
+                SatelliteType.Create(request.Type), 
+                parentSatellite.Id);
+
+            repository.Add(satellite);
+
+        }
 
         await unitOfWork.SaveChangesAsync(cancellationToken);
     }

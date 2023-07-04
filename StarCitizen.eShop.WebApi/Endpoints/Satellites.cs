@@ -1,12 +1,12 @@
 ﻿using Carter;
 using MediatR;
-using StarCitizen.eShop.Application.UseCases.Satellites.Create;
-using StarCitizen.eShop.Application.UseCases.Satellites;
-using StarCitizen.eShop.Domain.Satellites;
-using StarCitizen.eShop.Application.UseCases.Satellites.Read;
 using Microsoft.AspNetCore.Mvc;
-using StarCitizen.eShop.Application.UseCases.Satellites.Update;
+using StarCitizen.eShop.Application.UseCases.Satellites;
+using StarCitizen.eShop.Application.UseCases.Satellites.Create;
 using StarCitizen.eShop.Application.UseCases.Satellites.Delete;
+using StarCitizen.eShop.Application.UseCases.Satellites.Read;
+using StarCitizen.eShop.Application.UseCases.Satellites.Update;
+using StarCitizen.eShop.Domain.Satellites;
 
 namespace StarCitizen.eShop.WebApi.Endpoints;
 
@@ -39,7 +39,7 @@ public class Satellites : ICarterModule
 
         app.MapPut("satellites/{id:guid}", async (Guid id, [FromBody] UpdateSatelliteRequest request, ISender sender) =>
         {
-            var command = new UpdateSatelliteCommand(new SatelliteId(id), request.Name, request.Description, request.Type);
+            var command = new UpdateSatelliteCommand(new SatelliteId(id), request.Name, request.Description, request.Type, request.ParentId);
 
             await sender.Send(command);
 

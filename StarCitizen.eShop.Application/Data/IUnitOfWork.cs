@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace StarCitizen.eShop.Application.Data;
+﻿namespace StarCitizen.eShop.Application.Data;
 
 public interface IUnitOfWork
 {

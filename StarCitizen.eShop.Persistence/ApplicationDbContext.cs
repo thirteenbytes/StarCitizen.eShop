@@ -3,12 +3,6 @@ using Microsoft.EntityFrameworkCore;
 using StarCitizen.eShop.Application.Data;
 using StarCitizen.eShop.Domain.Primitives;
 using StarCitizen.eShop.Domain.Satellites;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace StarCitizen.eShop.Persistence;
 
@@ -31,11 +25,11 @@ public class ApplicationDbContext : DbContext, IApplicationDbContext, IUnitOfWor
         var domainEvents = ChangeTracker.Entries<Entity>()
             .Select(e => e.Entity)
             .Where(e => e.GetDomainEvents().Any())
-            .SelectMany(e=>e.GetDomainEvents());
+            .SelectMany(e => e.GetDomainEvents());
 
         var result = await base.SaveChangesAsync(cancellationToken);
 
-        foreach(var domainEvent in domainEvents)
+        foreach (var domainEvent in domainEvents)
         {
             await publisher.Publish(domainEvent, cancellationToken);
         }

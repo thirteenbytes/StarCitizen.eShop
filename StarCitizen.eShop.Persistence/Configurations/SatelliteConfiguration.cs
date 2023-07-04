@@ -14,11 +14,12 @@ internal class SatelliteConfiguration : IEntityTypeConfiguration<Satellite>
 
         builder.Property(x => x.Name).HasMaxLength(150).IsRequired();
         builder.HasIndex(x => x.Name).IsUnique();
-        
+
         builder.Property(x => x.Description).HasMaxLength(255);
 
         builder.Property(x => x.Type).HasConversion(st => st.Value.ToString(),
             value => SatelliteType.Create(value)).HasMaxLength(150).IsRequired();
-               
+
+        builder.Property(x => x.ParentId).HasConversion(parentId => parentId.Value, value => new SatelliteId(value));        
     }
 }

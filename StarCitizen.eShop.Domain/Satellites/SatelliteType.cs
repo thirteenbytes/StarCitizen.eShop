@@ -4,7 +4,7 @@ public record SatelliteType
 {
     private SatelliteType(SatelliteTypeEnum value) =>
         Value = value;
-    
+
     public SatelliteTypeEnum Value { get; init; }
 
     public static SatelliteType Create(string value)
