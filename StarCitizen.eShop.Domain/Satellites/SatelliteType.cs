@@ -11,7 +11,7 @@ public record SatelliteType
     {
         bool result = Enum.TryParse(value, out SatelliteTypeEnum enumValue);
 
-        if (!result) throw new Exception("Not found");
+        if (!result) throw new SatelliteNotFoundExpection(value);
 
         return new SatelliteType(enumValue);
     }

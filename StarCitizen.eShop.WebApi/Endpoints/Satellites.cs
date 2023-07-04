@@ -32,6 +32,18 @@ public class Satellites : ICarterModule
             }
         });
 
+        app.MapGet("satellites/{type}", async (string type, ISender sender) =>
+        {
+            try
+            {
+                return Results.Ok(await sender.Send(new ReadSatellitesByTypeQuery(SatelliteType.Create(type))));
+            }
+            catch (SatelliteNotFoundExpection ex)
+            {
+                return Results.NotFound(ex.Message);
+            }
+        });
+
         app.MapGet("satellites", async (ISender sender) =>
         {
             return Results.Ok(await sender.Send(new ReadSatellitesQuery()));

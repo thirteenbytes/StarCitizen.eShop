@@ -16,7 +16,7 @@ internal sealed class ReadSatelliteQueryHandler : IRequestHandler<ReadSatelliteQ
     {
         var satellite = await context
             .Satellites
-            .Where(s => s.Id == request.satelliteId)
+            .Where(s => s.Id == request.SatelliteId)
             .Select(s => new SatelliteResponse(
                 s.Id.Value,
                 s.Name,
@@ -26,7 +26,7 @@ internal sealed class ReadSatelliteQueryHandler : IRequestHandler<ReadSatelliteQ
 
         if (satellite is null)
         {
-            throw new SatelliteNotFoundExpection(request.satelliteId);
+            throw new SatelliteNotFoundExpection(request.SatelliteId);
         }
 
         return satellite;
