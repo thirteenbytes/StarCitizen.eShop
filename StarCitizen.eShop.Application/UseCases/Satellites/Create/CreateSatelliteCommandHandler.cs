@@ -18,15 +18,17 @@ internal class CreateSatelliteCommandHandler : IRequestHandler<CreateSatelliteCo
     public async Task Handle(CreateSatelliteCommand request, CancellationToken cancellationToken)
     {
 
+        Satellite satellite = null!;
+        
         if (request.parentId is null)
         {
-            var satellite = new Satellite(
+            satellite = new Satellite(
                 new SatelliteId(Guid.NewGuid()),
                 request.Name,
                 request.Description,
                 SatelliteType.Create(request.Type));
 
-            repository.Add(satellite);
+            
         }
         else
         {
@@ -36,7 +38,7 @@ internal class CreateSatelliteCommandHandler : IRequestHandler<CreateSatelliteCo
                 throw new SatelliteNotFoundExpection(request.parentId);
             }
 
-            var satellite = new Satellite(
+            satellite = new Satellite(
                 new SatelliteId(Guid.NewGuid()),
                 request.Name,
                 request.Description,
@@ -46,6 +48,7 @@ internal class CreateSatelliteCommandHandler : IRequestHandler<CreateSatelliteCo
             repository.Add(satellite);
 
         }
+        repository.Add(satellite);
 
         await unitOfWork.SaveChangesAsync(cancellationToken);
     }

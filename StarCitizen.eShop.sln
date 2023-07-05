@@ -15,6 +15,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{4EFCB22F
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StarCitizen.eShop.WebApi", "StarCitizen.eShop.WebApi\StarCitizen.eShop.WebApi.csproj", "{F51FEEA4-D8CE-4781-B353-88F3C4418542}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StarCitizen.eShop.Application.UnitTests", "StarCitizen.eShop.Application.UnitTests\StarCitizen.eShop.Application.UnitTests.csproj", "{A95304ED-9254-4B91-A9E3-329FE6CE6237}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -37,6 +39,10 @@ Global
 		{F51FEEA4-D8CE-4781-B353-88F3C4418542}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F51FEEA4-D8CE-4781-B353-88F3C4418542}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F51FEEA4-D8CE-4781-B353-88F3C4418542}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A95304ED-9254-4B91-A9E3-329FE6CE6237}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A95304ED-9254-4B91-A9E3-329FE6CE6237}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A95304ED-9254-4B91-A9E3-329FE6CE6237}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A95304ED-9254-4B91-A9E3-329FE6CE6237}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -46,6 +52,7 @@ Global
 		{F5A3B9F4-1B44-43D0-9879-092B9646935B} = {D038B871-36AE-4740-BDD0-FBC30D8AA353}
 		{37532A49-508F-4380-A74A-93028804DE61} = {D038B871-36AE-4740-BDD0-FBC30D8AA353}
 		{F51FEEA4-D8CE-4781-B353-88F3C4418542} = {D038B871-36AE-4740-BDD0-FBC30D8AA353}
+		{A95304ED-9254-4B91-A9E3-329FE6CE6237} = {4EFCB22F-334D-4279-BEB6-7F274142AC46}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {141E5AD2-8DCE-4F23-922C-DC7DDBCC5219}
