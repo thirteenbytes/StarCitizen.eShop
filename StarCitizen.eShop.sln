@@ -13,9 +13,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StarCitizen.eShop.Persisten
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{4EFCB22F-334D-4279-BEB6-7F274142AC46}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StarCitizen.eShop.WebApi", "StarCitizen.eShop.WebApi\StarCitizen.eShop.WebApi.csproj", "{F51FEEA4-D8CE-4781-B353-88F3C4418542}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StarCitizen.eShop.WebApi", "StarCitizen.eShop.WebApi\StarCitizen.eShop.WebApi.csproj", "{F51FEEA4-D8CE-4781-B353-88F3C4418542}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StarCitizen.eShop.Application.UnitTests", "StarCitizen.eShop.Application.UnitTests\StarCitizen.eShop.Application.UnitTests.csproj", "{A95304ED-9254-4B91-A9E3-329FE6CE6237}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StarCitizen.eShop.Application.UnitTests", "StarCitizen.eShop.Application.UnitTests\StarCitizen.eShop.Application.UnitTests.csproj", "{A95304ED-9254-4B91-A9E3-329FE6CE6237}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{93EB595C-35DC-4136-9D4E-6635DC25525B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -43,6 +45,10 @@ Global
 		{A95304ED-9254-4B91-A9E3-329FE6CE6237}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A95304ED-9254-4B91-A9E3-329FE6CE6237}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A95304ED-9254-4B91-A9E3-329FE6CE6237}.Release|Any CPU.Build.0 = Release|Any CPU
+		{93EB595C-35DC-4136-9D4E-6635DC25525B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{93EB595C-35DC-4136-9D4E-6635DC25525B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{93EB595C-35DC-4136-9D4E-6635DC25525B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{93EB595C-35DC-4136-9D4E-6635DC25525B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

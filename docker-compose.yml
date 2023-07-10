@@ -1,0 +1,16 @@
+version: '3.4'
+
+services:
+  starcitizen.eshop.webapi:
+    image: ${DOCKER_REGISTRY-}starcitizeneshopwebapi
+    build:
+      context: .
+      dockerfile: StarCitizen.eShop.WebApi/Dockerfile
+  sql-server-db:
+    container_name: sqlserver
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    ports:
+      - "1433:1433"
+    environment:
+      SA_PASSWORD: "A&VeryComplex123Password"
+      ACCEPT_EULA: "Y"
