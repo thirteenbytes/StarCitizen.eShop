@@ -1,18 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace StarCitizen.eShop.Domain.Items.Fps.Armors;
+﻿namespace StarCitizen.eShop.Domain.Items.Fps.Armors;
 
 public record DamageReduction
 {
-    private DamageReduction(decimal value) =>
+    private DamageReduction(decimal value) =>    
         Value = value;
+        
+    
+
+    private DamageReduction() { }
 
     public decimal Value { get; init; }
+    public bool InUse { get; init; } = true;
+
+    public static DamageReduction NotApplicable = new DamageReduction { InUse = false };
 
     public string ValueFormatted
     {
@@ -24,8 +24,8 @@ public record DamageReduction
 
     public static DamageReduction Create(decimal value)
     {
-        if(value < 0 || value > 100) 
-        {         
+        if (value < 0 || value > 100)
+        {
             throw new ArgumentOutOfRangeException($"{value}");
         }
 

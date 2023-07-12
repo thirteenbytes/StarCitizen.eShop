@@ -4,7 +4,7 @@ using StarCitizen.eShop.Domain.Satellites;
 
 namespace StarCitizen.eShop.Persistence.Configurations;
 
-internal class SatelliteConfiguration : IEntityTypeConfiguration<Satellite>
+internal sealed class SatelliteConfiguration : IEntityTypeConfiguration<Satellite>
 {
     public void Configure(EntityTypeBuilder<Satellite> builder)
     {
