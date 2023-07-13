@@ -1,4 +1,4 @@
-﻿namespace StarCitizen.eShop.Domain.Items.Fps.Armors;
+﻿namespace StarCitizen.eShop.Domain.Items.Fps.ArmorItems;
 
 public record ArmorType
 {

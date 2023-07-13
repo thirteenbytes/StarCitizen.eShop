@@ -1,7 +1,7 @@
 ﻿using MediatR;
 using Microsoft.EntityFrameworkCore;
 using StarCitizen.eShop.Application.Data;
-using StarCitizen.eShop.Domain.Items.Fps.Armors;
+using StarCitizen.eShop.Domain.Items.Fps.ArmorItems;
 using StarCitizen.eShop.Domain.Primitives;
 using StarCitizen.eShop.Domain.Satellites;
 

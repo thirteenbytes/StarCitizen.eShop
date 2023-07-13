@@ -1,4 +1,4 @@
-﻿namespace StarCitizen.eShop.Domain.Items.Fps.Armors;
+﻿namespace StarCitizen.eShop.Domain.Items.Fps.ArmorItems;
 public record Capacity
 {
     private Capacity(decimal value) =>    
@@ -10,10 +10,15 @@ public record Capacity
 
     public static Capacity NotApplicable = new Capacity {  InUse = false };
 
-    public static Capacity Create(decimal value)
+    public static Capacity Create(decimal? value)
     {
-        if(value < 0)   throw new ArgumentOutOfRangeException($"{value}");
-        return new Capacity(value);
+        if (value.HasValue)
+        {
+            if (value < 0) throw new ArgumentOutOfRangeException($"{value}");
+            return new Capacity(value.Value);
+        }
+
+        return NotApplicable;
     }                               
 }
 

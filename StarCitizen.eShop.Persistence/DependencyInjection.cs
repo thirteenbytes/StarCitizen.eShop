@@ -2,6 +2,7 @@
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using StarCitizen.eShop.Application.Data;
+using StarCitizen.eShop.Domain.Items.Fps.ArmorItems;
 using StarCitizen.eShop.Domain.Satellites;
 using StarCitizen.eShop.Persistence.Repositories;
 
@@ -22,6 +23,7 @@ public static class DependencyInjection
             sp.GetRequiredService<ApplicationDbContext>());
 
         services.AddScoped<ISatelliteRepository, SatelliteRepository>();
+        services.AddScoped<IArmorRepository, ArmorRepository>();
 
         return services;
 

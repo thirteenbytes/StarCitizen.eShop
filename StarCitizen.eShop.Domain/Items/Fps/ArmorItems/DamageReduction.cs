@@ -1,12 +1,10 @@
-﻿namespace StarCitizen.eShop.Domain.Items.Fps.Armors;
+﻿namespace StarCitizen.eShop.Domain.Items.Fps.ArmorItems;
 
 public record DamageReduction
 {
     private DamageReduction(decimal value) =>    
         Value = value;
-        
-    
-
+           
     private DamageReduction() { }
 
     public decimal Value { get; init; }
@@ -22,13 +20,18 @@ public record DamageReduction
         }
     }
 
-    public static DamageReduction Create(decimal value)
+    public static DamageReduction Create(decimal? value)
     {
-        if (value < 0 || value > 100)
+        if(value.HasValue)
         {
-            throw new ArgumentOutOfRangeException($"{value}");
+            if (value < 0 || value > 100)
+            {
+                throw new ArgumentOutOfRangeException($"{value}");
+            }
+
+            return new DamageReduction(value.Value);
         }
 
-        return new DamageReduction(value);
+        return NotApplicable;        
     }
 }

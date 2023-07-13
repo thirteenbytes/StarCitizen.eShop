@@ -1,30 +1,37 @@
-using Microsoft.EntityFrameworkCore.Metadata;
-using StarCitizen.eShop.Domain.Items.Fps.Armors;
+using StarCitizen.eShop.Domain.Items.Fps.ArmorItems;
 using StarCitizen.eShop.Persistence.UnitTests.Fixtures;
-using System.Runtime.CompilerServices;
 
 namespace StarCitizen.eShop.Persistence.UnitTests
 {
     public class ArmorEFUnitTests : IClassFixture<ApplicationDbContextFixture>
     {
-        
+
         private readonly ApplicationDbContextFixture fixture;
 
-        public ArmorEFUnitTests(ApplicationDbContextFixture fixture) =>        
+        public ArmorEFUnitTests(ApplicationDbContextFixture fixture) =>
             this.fixture = fixture;
-        
+
 
         [Fact]
         public async Task TemperaturePopulateTest()
         {
-            
+
             // Arrange
             var lightArmor = new Armor(
                 new ArmorId(Guid.NewGuid()),
                 "Test Armor",
+                "ManmufacturerName",
                 ArmorType.Create("Light"),
                 DamageReduction.Create(10),
-                TemperatureRange.Create(-30, 190), Capacity.Create(10), Volume.Create(10));
+                TemperatureStatistics.Create(-30, 190), 
+                Capacity.Create(10), 
+                Volume.Create(10),
+                BiochemicalResistance.Create(0.10M),
+                DistortionResistence.Create(0.02M),
+                EnergyResistance.Create(0.05M), 
+                PhysicalResistance.Create(0.21M),
+                StunResistance.Create(0.12M),
+                ThermalResistance.Create(0.04M));
 
             this.fixture.Context.Armors.Add(lightArmor);
             await this.fixture.Context.SaveChangesAsync();
