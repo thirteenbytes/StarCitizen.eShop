@@ -35,6 +35,8 @@ namespace StarCitizen.eShop.Persistence.UnitTests
             // Assert
             Assert.NotNull(newArmor);
             Assert.NotNull(newArmor.TemperatureRange);
+
+            Assert.Equal("Test Armor", newArmor.Name);
             Assert.Equal(-30, newArmor.TemperatureRange.MinimumTemperature);
             Assert.Equal(190, newArmor.TemperatureRange.MaximumTemperature);
         }
