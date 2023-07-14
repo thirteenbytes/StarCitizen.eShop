@@ -1,6 +1,6 @@
 ﻿namespace StarCitizen.eShop.Domain.Items.Fps.ArmorItems;
 
-public record ArmorType
+public sealed record ArmorType
 {
     private ArmorType(ArmorTypeEnum typeValue, ArmorWeightEnum weightValue)
     {

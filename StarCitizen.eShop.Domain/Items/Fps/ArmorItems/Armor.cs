@@ -1,6 +1,6 @@
 ﻿namespace StarCitizen.eShop.Domain.Items.Fps.ArmorItems;
 
-public class Armor : Item<ArmorId>
+public sealed class Armor : Item<ArmorId>
 {
     
     public Armor(
