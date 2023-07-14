@@ -1,6 +1,6 @@
 ﻿namespace StarCitizen.eShop.Domain.Items.Fps.ArmorItems;
 
-public record BiochemicalResistance
+public sealed record BiochemicalResistance
 {
     private BiochemicalResistance(decimal value) =>
         Value = value;

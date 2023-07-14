@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using StarCitizen.eShop.Persistence;
 
@@ -11,9 +12,11 @@ using StarCitizen.eShop.Persistence;
 namespace StarCitizen.eShop.Persistence.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230714001209_Update_Armor_ChangeColumns")]
+    partial class Update_Armor_ChangeColumns
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -104,28 +107,7 @@ namespace StarCitizen.eShop.Persistence.Migrations
 
             modelBuilder.Entity("StarCitizen.eShop.Domain.Items.Fps.ArmorItems.Armor", b =>
                 {
-                    b.OwnsOne("StarCitizen.eShop.Domain.Items.Fps.ArmorItems.Armor.TemperatureRange#StarCitizen.eShop.Domain.Items.Fps.ArmorItems.TemperatureStatistics", "TemperatureRange", b1 =>
-                        {
-                            b1.Property<Guid>("ArmorId")
-                                .HasColumnType("uniqueidentifier");
-
-                            b1.Property<decimal>("MaximumTemperature")
-                                .HasColumnType("decimal(18,2)")
-                                .HasColumnName("MaximumTemperature");
-
-                            b1.Property<decimal>("MinimumTemperature")
-                                .HasColumnType("decimal(18,2)")
-                                .HasColumnName("MinimumTemperature");
-
-                            b1.HasKey("ArmorId");
-
-                            b1.ToTable("Armor", (string)null);
-
-                            b1.WithOwner()
-                                .HasForeignKey("ArmorId");
-                        });
-
-                    b.OwnsOne("StarCitizen.eShop.Domain.Items.Fps.ArmorItems.Armor.Type#StarCitizen.eShop.Domain.Items.Fps.ArmorItems.ArmorType", "Type", b1 =>
+                    b.OwnsOne("StarCitizen.eShop.Domain.Items.Fps.ArmorItems.ArmorType", "Type", b1 =>
                         {
                             b1.Property<Guid>("ArmorId")
                                 .HasColumnType("uniqueidentifier");
@@ -144,7 +126,28 @@ namespace StarCitizen.eShop.Persistence.Migrations
 
                             b1.HasKey("ArmorId");
 
-                            b1.ToTable("Armor", (string)null);
+                            b1.ToTable("Armor");
+
+                            b1.WithOwner()
+                                .HasForeignKey("ArmorId");
+                        });
+
+                    b.OwnsOne("StarCitizen.eShop.Domain.Items.Fps.ArmorItems.TemperatureStatistics", "TemperatureRange", b1 =>
+                        {
+                            b1.Property<Guid>("ArmorId")
+                                .HasColumnType("uniqueidentifier");
+
+                            b1.Property<decimal>("MaximumTemperature")
+                                .HasColumnType("decimal(18,2)")
+                                .HasColumnName("MaximumTemperature");
+
+                            b1.Property<decimal>("MinimumTemperature")
+                                .HasColumnType("decimal(18,2)")
+                                .HasColumnName("MinimumTemperature");
+
+                            b1.HasKey("ArmorId");
+
+                            b1.ToTable("Armor");
 
                             b1.WithOwner()
                                 .HasForeignKey("ArmorId");

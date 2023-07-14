@@ -9,7 +9,7 @@ public class Armor : Item<ArmorId>
         string manufacturer,
         ArmorType type, 
         DamageReduction damageReduction, 
-        TemperatureStatistics temperatureRange, 
+        TemperatureStatistics temperatureStatistics, 
         Capacity capacity, 
         Volume volume, 
         BiochemicalResistance biochemicalResistance, 
@@ -21,7 +21,7 @@ public class Armor : Item<ArmorId>
     {
         Type = type;
         DamageReduction = damageReduction;
-        TemperatureRange = temperatureRange;
+        TemperatureRange = temperatureStatistics;
         Capacity = capacity;
         Volume = volume;
         BiochemicalResistance = biochemicalResistance;

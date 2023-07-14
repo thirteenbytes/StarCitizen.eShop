@@ -1,6 +1,6 @@
 ﻿namespace StarCitizen.eShop.Domain.Items.Fps.ArmorItems;
 
-public record Volume
+public sealed record Volume
 {
     private Volume(decimal value) =>
         Value = value;
@@ -16,7 +16,6 @@ public record Volume
     {
         if (value.HasValue)
         {
-
             if (value < 0)
             {
                 throw new ArgumentOutOfRangeException($"{value}");

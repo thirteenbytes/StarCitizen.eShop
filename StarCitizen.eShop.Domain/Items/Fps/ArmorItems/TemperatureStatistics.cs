@@ -1,6 +1,6 @@
 ﻿namespace StarCitizen.eShop.Domain.Items.Fps.ArmorItems;
 
-public record TemperatureStatistics
+public sealed record TemperatureStatistics
 {
     private TemperatureStatistics(decimal minimumTemperature, decimal maximumTemperature)
     {

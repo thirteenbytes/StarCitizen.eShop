@@ -1,6 +1,6 @@
 ﻿namespace StarCitizen.eShop.Domain.Items.Fps.ArmorItems;
 
-public record EnergyResistance
+public sealed record EnergyResistance
 {
     private EnergyResistance(decimal value) =>
         Value = value;

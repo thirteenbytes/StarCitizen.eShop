@@ -1,5 +1,5 @@
 ﻿namespace StarCitizen.eShop.Domain.Items.Fps.ArmorItems;
-public record Capacity
+public sealed record Capacity
 {
     private Capacity(decimal value) =>    
         Value = value;

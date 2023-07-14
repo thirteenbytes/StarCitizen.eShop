@@ -1,6 +1,6 @@
 ﻿namespace StarCitizen.eShop.Domain.Items.Fps.ArmorItems;
 
-public record DistortionResistence
+public sealed record DistortionResistence
 {
     private DistortionResistence(decimal value) =>
         Value = value;

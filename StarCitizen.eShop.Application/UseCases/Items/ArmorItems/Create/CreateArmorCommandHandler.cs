@@ -24,7 +24,7 @@ internal class CreateArmorCommandHandler : IRequestHandler<CreateArmorCommand>
             new ArmorId(Guid.NewGuid()),
             request.Name,
             request.Manufacturer,
-            ArmorType.Create(request.Type),
+            ArmorType.Create(request.Type, request.Weight),
             DamageReduction.Create(request.DamageReduction!.Value),
             TemperatureStatistics.Create(request.MinimumTemperature!.Value, request.MaximumTemperature!.Value),
             Capacity.Create(request.Capacity),

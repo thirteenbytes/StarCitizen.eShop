@@ -5,6 +5,7 @@ namespace StarCitizen.eShop.Application.UseCases.Items.ArmorItems.Create;
 public record CreateArmorCommand(
     string Name,
     string Type,
+    string Weight,
     string Manufacturer,
     decimal? DamageReduction,
     decimal? MinimumTemperature,

@@ -1,6 +1,6 @@
 ﻿namespace StarCitizen.eShop.Domain.Satellites;
 
-public class Satellite
+public sealed class Satellite
 {
     public Satellite(SatelliteId id, string name, string description, SatelliteType type)
     {

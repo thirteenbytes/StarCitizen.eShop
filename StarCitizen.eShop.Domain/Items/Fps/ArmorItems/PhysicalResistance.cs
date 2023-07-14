@@ -1,6 +1,6 @@
 ﻿namespace StarCitizen.eShop.Domain.Items.Fps.ArmorItems;
 
-public record PhysicalResistance
+public sealed record PhysicalResistance
 {
     private PhysicalResistance(decimal value) =>
         Value = value;

@@ -1,6 +1,6 @@
 ﻿namespace StarCitizen.eShop.Domain.Items.Fps.ArmorItems;
 
-public record DamageReduction
+public sealed record DamageReduction
 {
     private DamageReduction(decimal value) =>    
         Value = value;

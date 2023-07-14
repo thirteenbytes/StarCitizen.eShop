@@ -1,6 +1,6 @@
 ﻿namespace StarCitizen.eShop.Domain.Items.Fps.ArmorItems;
 
-public record ThermalResistance
+public sealed record ThermalResistance
 {
     private ThermalResistance(decimal value) =>
         Value = value;

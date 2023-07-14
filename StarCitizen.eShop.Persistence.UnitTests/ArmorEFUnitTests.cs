@@ -21,7 +21,7 @@ namespace StarCitizen.eShop.Persistence.UnitTests
                 new ArmorId(Guid.NewGuid()),
                 "Test Armor",
                 "ManmufacturerName",
-                ArmorType.Create("Light"),
+                ArmorType.Create("Helmet", "Flight"),
                 DamageReduction.Create(10),
                 TemperatureStatistics.Create(-30, 190), 
                 Capacity.Create(10), 
