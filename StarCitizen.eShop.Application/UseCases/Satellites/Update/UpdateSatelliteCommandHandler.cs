@@ -24,7 +24,7 @@ internal sealed class UpdateSatelliteCommandHandler : IRequestHandler<UpdateSate
             throw new SatelliteNotFoundExpection(request.SatelliteId);
         }
 
-        satellite.Update(request.Name, request.Description, SatelliteType.Create(request.Type), request.ParentId);
+        satellite.Update(request.Name, request.Description, SatelliteType.Set(request.Type), request.ParentId);
         repository.Update(satellite);
 
         await unitOfWork.SaveChangesAsync(cancellationToken);

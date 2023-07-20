@@ -12,13 +12,10 @@ public sealed record DamageReduction
 
     public static DamageReduction NotApplicable = new DamageReduction { InUse = false };
 
-    public string ValueFormatted
+    public override string ToString()
     {
-        get
-        {
-            return Value.ToString("P2");
-        }
-    }
+        return Value.ToString("P2");
+    }    
 
     public static DamageReduction Create(decimal? value)
     {

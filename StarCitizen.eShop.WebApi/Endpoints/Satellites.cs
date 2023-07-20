@@ -36,7 +36,7 @@ public class Satellites : ICarterModule
         {
             try
             {
-                return Results.Ok(await sender.Send(new ReadSatellitesByTypeQuery(SatelliteType.Create(type))));
+                return Results.Ok(await sender.Send(new ReadSatellitesByTypeQuery(SatelliteType.Set(type))));
             }
             catch (SatelliteNotFoundExpection ex)
             {

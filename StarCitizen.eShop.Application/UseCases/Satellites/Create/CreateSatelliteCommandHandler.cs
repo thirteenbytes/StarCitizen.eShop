@@ -26,7 +26,7 @@ internal class CreateSatelliteCommandHandler : IRequestHandler<CreateSatelliteCo
                 new SatelliteId(Guid.NewGuid()),
                 request.Name,
                 request.Description,
-                SatelliteType.Create(request.Type));
+                SatelliteType.Set(request.Type));
 
             
         }
@@ -42,7 +42,7 @@ internal class CreateSatelliteCommandHandler : IRequestHandler<CreateSatelliteCo
                 new SatelliteId(Guid.NewGuid()),
                 request.Name,
                 request.Description,
-                SatelliteType.Create(request.Type), 
+                SatelliteType.Set(request.Type), 
                 parentSatellite.Id);
 
             repository.Add(satellite);

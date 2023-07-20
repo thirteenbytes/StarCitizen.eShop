@@ -18,7 +18,7 @@ internal sealed class SatelliteConfiguration : IEntityTypeConfiguration<Satellit
         builder.Property(x => x.Description).HasMaxLength(255);
 
         builder.Property(x => x.Type).HasConversion(st => st.Value.ToString(),
-            value => SatelliteType.Create(value)).HasMaxLength(150).IsRequired();
+            value => SatelliteType.Set(value)).HasMaxLength(150).IsRequired();
 
         builder.Property(x => x.ParentId).HasConversion(parentId => parentId.Value, value => new SatelliteId(value));        
     }

@@ -7,7 +7,7 @@ public record SatelliteType
 
     public SatelliteTypeEnum Value { get; init; }
 
-    public static SatelliteType Create(string value)
+    public static SatelliteType Set(string value)
     {
         bool result = Enum.TryParse(value, out SatelliteTypeEnum enumValue);
 

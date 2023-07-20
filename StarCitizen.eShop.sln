@@ -19,7 +19,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StarCitizen.eShop.Applicati
 EndProject
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{93EB595C-35DC-4136-9D4E-6635DC25525B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StarCitizen.eShop.Persistence.UnitTests", "StarCitizen.eShop.Persistence.UnitTests\StarCitizen.eShop.Persistence.UnitTests.csproj", "{AE0F161A-4084-4E47-B33F-ABF39853A30F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StarCitizen.eShop.Persistence.UnitTests", "StarCitizen.eShop.Persistence.UnitTests\StarCitizen.eShop.Persistence.UnitTests.csproj", "{AE0F161A-4084-4E47-B33F-ABF39853A30F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StarCitizen.eShop.Domain.UnitTests", "..\StarCitizen.eShop.Domain.UnitTests\StarCitizen.eShop.Domain.UnitTests.csproj", "{6C33CC48-127C-4B2A-A6F8-BA1DC1F0EA15}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "web", "web", "{94979F01-028C-4C90-97CA-CC2E78EFDE62}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -55,6 +59,10 @@ Global
 		{AE0F161A-4084-4E47-B33F-ABF39853A30F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AE0F161A-4084-4E47-B33F-ABF39853A30F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AE0F161A-4084-4E47-B33F-ABF39853A30F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C33CC48-127C-4B2A-A6F8-BA1DC1F0EA15}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C33CC48-127C-4B2A-A6F8-BA1DC1F0EA15}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C33CC48-127C-4B2A-A6F8-BA1DC1F0EA15}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C33CC48-127C-4B2A-A6F8-BA1DC1F0EA15}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -66,6 +74,7 @@ Global
 		{F51FEEA4-D8CE-4781-B353-88F3C4418542} = {D038B871-36AE-4740-BDD0-FBC30D8AA353}
 		{A95304ED-9254-4B91-A9E3-329FE6CE6237} = {4EFCB22F-334D-4279-BEB6-7F274142AC46}
 		{AE0F161A-4084-4E47-B33F-ABF39853A30F} = {4EFCB22F-334D-4279-BEB6-7F274142AC46}
+		{6C33CC48-127C-4B2A-A6F8-BA1DC1F0EA15} = {4EFCB22F-334D-4279-BEB6-7F274142AC46}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {141E5AD2-8DCE-4F23-922C-DC7DDBCC5219}
