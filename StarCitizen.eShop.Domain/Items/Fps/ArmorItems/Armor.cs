@@ -3,7 +3,7 @@
 public sealed class Armor : Item<ArmorId>
 {
     
-    public Armor(
+    private Armor(
         ArmorId id,
         string name,
         string manufacturer,
@@ -47,6 +47,38 @@ public sealed class Armor : Item<ArmorId>
     private Armor() 
         : base() { }
        
+
+    public static Armor Create(string name,
+        string manufacturer,
+        ArmorType type,
+        DamageReduction damageReduction,
+        TemperatureStatistics temperatureStatistics,
+        Capacity capacity,
+        Volume volume,
+        BiochemicalResistance biochemicalResistance,
+        DistortionResistence distortionResistence,
+        EnergyResistance energyResistance,
+        PhysicalResistance physicalResistance,
+        StunResistance stunResistance,
+        ThermalResistance thermalResistance)
+    {
+        var id = new ArmorId(Guid.NewGuid());
+        return new Armor(
+            id, 
+            name, 
+            manufacturer, 
+            type, 
+            damageReduction, 
+            temperatureStatistics, 
+            capacity, 
+            volume, 
+            biochemicalResistance, 
+            distortionResistence, 
+            energyResistance, 
+            physicalResistance, 
+            stunResistance, 
+            thermalResistance);
+    }
 
     public void Update(
         ArmorType type,
