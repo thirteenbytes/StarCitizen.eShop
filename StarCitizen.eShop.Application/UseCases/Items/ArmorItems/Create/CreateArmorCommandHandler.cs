@@ -20,8 +20,7 @@ internal class CreateArmorCommandHandler : IRequestHandler<CreateArmorCommand>
 
         // Populate Armor properties
 
-        var armor = new Armor(
-            new ArmorId(Guid.NewGuid()),
+        var armor = Armor.Create(            
             request.Name,
             request.Manufacturer,
             ArmorType.Create(request.Type, request.Weight),

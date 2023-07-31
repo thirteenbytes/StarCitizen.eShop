@@ -1,4 +1,6 @@
-﻿namespace StarCitizen.eShop.Domain.Items.Fps.ArmorItems;
+﻿using StarCitizen.eShop.Domain.Shared;
 
-public sealed record ArmorId(Guid Value);
+namespace StarCitizen.eShop.Domain.Items.Fps.ArmorItems;
+
+public sealed record ArmorId(Guid Value) : Id(Value);
 

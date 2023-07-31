@@ -33,6 +33,7 @@ public sealed record Money
 
     public static Money FromDecimal(decimal amount, string currency, ICurrencyLookup currencyLookup) =>
         new Money(amount, currency, currencyLookup);
+    
 
     public static Money FromString(string amount, string currency,
             ICurrencyLookup currencyLookup) =>

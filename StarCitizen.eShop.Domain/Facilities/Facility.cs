@@ -72,7 +72,7 @@ public sealed class Facility
         }
     }
 
-    public void SubstractQuantityFromStockItemInInventory(object itemId, int quantityToSubtract)
+    public void SubstractQuantityFromStockItemInInventory(Id itemId, int quantityToSubtract)
     {
         var stockItem = Inventory.FirstOrDefault(x => x.Item.Id == itemId);
         if (stockItem != null)

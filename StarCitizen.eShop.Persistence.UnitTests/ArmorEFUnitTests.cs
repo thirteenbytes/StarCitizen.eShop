@@ -17,8 +17,7 @@ namespace StarCitizen.eShop.Persistence.UnitTests
         {
 
             // Arrange
-            var lightArmor = new Armor(
-                new ArmorId(Guid.NewGuid()),
+            var lightArmor = Armor.Create(               
                 "Test Armor",
                 "ManmufacturerName",
                 ArmorType.Create("Helmet", "Flight"),

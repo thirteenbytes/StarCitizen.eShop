@@ -20,7 +20,7 @@ public class Satellites : ICarterModule
             return Results.Ok();
         });
 
-        app.MapGet("satellites/{id:guid}", async (Guid id, ISender sender) =>
+        app.MapGet("satellite/{id:guid}", async (Guid id, ISender sender) =>
         {
             try
             {

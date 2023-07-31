@@ -1,15 +1,17 @@
-﻿namespace StarCitizen.eShop.Domain.Items;
+﻿using StarCitizen.eShop.Domain.Shared;
 
-public abstract class Item<TId>
+namespace StarCitizen.eShop.Domain.Items;
+
+public abstract class Item
 {
     protected Item() { }
-    protected Item(TId id, string name, string manufacturer)
+    protected Item(Id id, string name, string manufacturer)
     {
         Id = id;
         Name = name;
         Manufacturer = manufacturer;
     }
-    public TId Id { get; protected set; }
+    public Id Id { get; protected set; }
     public string Name { get; protected set; }
     public string Manufacturer { get; set; }
 }
